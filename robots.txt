@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://wewinleads.com.au/sitemap.xml
+
+# Important pages for SEO
+Allow: /index.html
+Allow: /services.html
+Allow: /brisbane-b2b-leads.html
+Allow: /gold-coast-business-leads.html
+Allow: /contact.html
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
