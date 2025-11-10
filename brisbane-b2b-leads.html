@@ -50,61 +50,130 @@
             color: #27261f;
             font-weight: 400;
             background: #fefbf8;
+            padding-top: 120px !important; /* Account for wider floating header */
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
+        /* Enhanced Disjointed Navigation - Always Consistent */
         header {
-            background: #fefbf8;
-            box-shadow: 0 2px 5px rgba(39, 38, 31, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            background: rgba(246, 99, 82, 0.95) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
+            position: fixed !important;
+            top: 20px !important;
+            left: 20px !important;
+            right: 20px !important;
+            z-index: 1000 !important;
+            border-radius: 24px !important;
+            box-shadow: 0 8px 32px rgba(39, 38, 31, 0.15), 0 4px 16px rgba(246, 99, 82, 0.3) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            transition: none !important;
+            transform: none !important;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 1.5rem;
+            padding: 20px 48px;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .logo {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.8rem;
+            font-size: 24px;
             font-weight: 700;
-            color: #27261f;
-            letter-spacing: -0.025em;
+            color: white;
+            text-decoration: none;
             display: flex;
             align-items: center;
-            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: translateX(2px);
         }
 
         .logo img {
             height: 40px;
             width: auto;
+            transition: height 0.3s ease;
+        }
+
+        header.scrolled .logo img {
+            height: 36px;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 32px;
+            margin: 0;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #8a6d55;
+            color: rgba(255, 255, 255, 0.9);
             font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 8px;
+            position: relative;
         }
 
         .nav-links a:hover {
-            color: #f66352;
+            color: white;
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .btn-primary {
+            background: #27261f;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: #1a1915;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            border: 1px solid #e3d5cf;
+            color: #27261f;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            background: #fefbf8;
+        }
+
+        .btn-secondary:hover {
+            border-color: #8a6d55;
+            background: #e1a998;
+            color: white;
         }
 
         .hero-local {
@@ -292,14 +361,113 @@
             padding: 2rem 0;
         }
 
-        @media (max-width: 768px) {
-            .hero-local h1 {
-                font-size: 2.5rem;
+        /* Responsive Navigation Styles */
+        @media (max-width: 1024px) {
+            body {
+                padding-top: 100px !important;
+            }
+
+            nav {
+                padding: 16px 32px;
+            }
+
+            .logo img {
+                height: 36px;
             }
 
             .nav-links {
-                display: none;
+                gap: 24px;
             }
+
+            .nav-links a {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+
+            .nav-actions {
+                gap: 12px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                padding: 10px 20px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 80px !important;
+            }
+
+            header {
+                top: 12px !important;
+                left: 12px !important;
+                right: 12px !important;
+                border-radius: 18px !important;
+            }
+
+            nav {
+                padding: 12px 20px;
+                flex-wrap: nowrap;
+            }
+
+            .logo img {
+                height: 32px;
+            }
+
+            .nav-links {
+                display: flex !important;
+                gap: 16px;
+                flex: 1;
+                justify-content: center;
+                margin: 0 16px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+                padding: 4px 8px;
+                white-space: nowrap;
+            }
+
+            .nav-actions {
+                gap: 8px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                padding: 8px 12px;
+                font-size: 12px;
+                white-space: nowrap;
+            }
+
+            .hero-local h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Navigation Button Overrides */
+        .btn-primary {
+            background: rgba(39, 38, 31, 0.95) !important;
+            color: white !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .btn-primary:hover {
+            background: rgba(26, 25, 21, 0.98) !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.95) !important;
+            color: rgba(39, 38, 31, 0.9) !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 1) !important;
+            color: #27261f !important;
+            border-color: rgba(255, 255, 255, 0.5) !important;
         }
     </style>
 </head>
@@ -307,15 +475,18 @@
     <header>
         <nav class="container">
             <a href="index.html" class="logo">
-                <img src="full logo black trans.png" alt="WeWinLeads" />
+                <img src="full logo white trans.png" alt="WeWinLeads" />
             </a>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="locations.html">Locations</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html">How it works</a></li>
             </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn-secondary">Get a demo</a>
+                <a href="contact.html" class="btn-primary">Sign up</a>
+            </div>
         </nav>
     </header>
 

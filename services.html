@@ -46,35 +46,60 @@
             padding: 0 24px;
         }
 
-        /* Navigation */
+        /* Enhanced Disjointed Navigation - Always Consistent */
+        body {
+            padding-top: 120px !important; /* Account for wider floating header */
+            background: #fefbf8;
+        }
+
         header {
-            background: rgba(254, 251, 248, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #e3d5cf;
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            background: rgba(246, 99, 82, 0.95) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
+            position: fixed !important;
+            top: 20px !important;
+            left: 20px !important;
+            right: 20px !important;
+            z-index: 1000 !important;
+            border-radius: 24px !important;
+            box-shadow: 0 8px 32px rgba(39, 38, 31, 0.15), 0 4px 16px rgba(246, 99, 82, 0.3) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            transition: none !important;
+            transform: none !important;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 24px;
+            padding: 20px 48px;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .logo {
             font-size: 24px;
             font-weight: 700;
-            color: #27261f;
+            color: white;
             text-decoration: none;
             display: flex;
             align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: translateX(2px);
         }
 
         .logo img {
             height: 40px;
             width: auto;
+            transition: height 0.3s ease;
+        }
+
+        header.scrolled .logo img {
+            height: 36px;
         }
 
         .nav-links {
@@ -86,14 +111,19 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #8a6d55;
+            color: rgba(255, 255, 255, 0.9);
             font-weight: 500;
             font-size: 15px;
-            transition: color 0.2s ease;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 8px;
+            position: relative;
         }
 
         .nav-links a:hover {
-            color: #27261f;
+            color: white;
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-1px);
         }
 
         .nav-actions {
@@ -440,18 +470,92 @@
             font-size: 14px;
         }
 
-        /* Mobile Responsive */
+        /* Responsive Navigation Styles */
+        @media (max-width: 1024px) {
+            body {
+                padding-top: 100px !important;
+            }
+
+            nav {
+                padding: 16px 32px;
+            }
+
+            .logo img {
+                height: 36px;
+            }
+
+            .nav-links {
+                gap: 24px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+
+            .nav-actions {
+                gap: 12px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                padding: 10px 20px;
+                font-size: 13px;
+            }
+        }
+
         @media (max-width: 768px) {
+            body {
+                padding-top: 80px !important;
+            }
+
+            header {
+                top: 12px !important;
+                left: 12px !important;
+                right: 12px !important;
+                border-radius: 18px !important;
+            }
+
+            nav {
+                padding: 12px 20px;
+                flex-wrap: nowrap;
+            }
+
+            .logo img {
+                height: 32px;
+            }
+
+            .nav-links {
+                display: flex !important; /* Override the display: none */
+                gap: 16px;
+                flex: 1;
+                justify-content: center;
+                margin: 0 16px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+                padding: 4px 8px;
+                white-space: nowrap;
+            }
+
+            .nav-actions {
+                gap: 8px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                padding: 8px 12px;
+                font-size: 12px;
+                white-space: nowrap;
+            }
+
             .services-hero h1 {
                 font-size: 40px;
             }
 
             .section-title {
                 font-size: 32px;
-            }
-
-            .nav-links {
-                display: none;
             }
 
             .services-grid,
@@ -469,13 +573,37 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Navigation Button Overrides */
+        .btn-primary {
+            background: rgba(39, 38, 31, 0.95) !important;
+            color: white !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .btn-primary:hover {
+            background: rgba(26, 25, 21, 0.98) !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.95) !important;
+            color: rgba(39, 38, 31, 0.9) !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 1) !important;
+            color: #27261f !important;
+            border-color: rgba(255, 255, 255, 0.5) !important;
+        }
     </style>
 </head>
 <body>
     <header>
         <nav class="container">
             <a href="index.html" class="logo">
-                <img src="full logo black trans.png" alt="WeWinLeads" />
+                <img src="full logo white trans.png" alt="WeWinLeads" />
             </a>
             <ul class="nav-links">
                 <li><a href="services.html">Services</a></li>
