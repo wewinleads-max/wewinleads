@@ -505,6 +505,91 @@
             }
         }
 
+        /* Burger Menu Styles */
+        .burger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+            gap: 4px;
+        }
+
+        .burger-line {
+            width: 24px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .burger-menu.active .burger-line:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .burger-menu.active .burger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger-menu.active .burger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 12px;
+            right: 12px;
+            background: rgba(246, 99, 82, 0.98);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 24px;
+            z-index: 999;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            margin: 0 0 24px 0;
+            padding: 0;
+        }
+
+        .mobile-nav-links li {
+            margin-bottom: 16px;
+        }
+
+        .mobile-nav-links a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .mobile-nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .mobile-nav-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .mobile-nav-actions .btn-primary,
+        .mobile-nav-actions .btn-secondary {
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+        }
+
         @media (max-width: 768px) {
             body {
                 padding-top: 80px !important;
@@ -519,36 +604,20 @@
 
             nav {
                 padding: 12px 20px;
-                flex-wrap: nowrap;
+                justify-content: space-between;
             }
 
             .logo img {
                 height: 32px;
             }
 
-            .nav-links {
-                display: flex !important; /* Override the display: none */
-                gap: 16px;
-                flex: 1;
-                justify-content: center;
-                margin: 0 16px;
-            }
-
-            .nav-links a {
-                font-size: 13px;
-                padding: 4px 8px;
-                white-space: nowrap;
-            }
-
+            .nav-links,
             .nav-actions {
-                gap: 8px;
+                display: none;
             }
 
-            .btn-primary,
-            .btn-secondary {
-                padding: 8px 12px;
-                font-size: 12px;
-                white-space: nowrap;
+            .burger-menu {
+                display: flex;
             }
 
             .services-hero h1 {
@@ -616,8 +685,27 @@
                 <a href="contact.html" class="btn-secondary">Get a demo</a>
                 <a href="contact.html" class="btn-primary">Sign up</a>
             </div>
+            <div class="burger-menu" onclick="toggleMobileMenu()">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
         </nav>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">How it works</a></li>
+        </ul>
+        <div class="mobile-nav-actions">
+            <a href="contact.html" class="btn-secondary">Get a demo</a>
+            <a href="contact.html" class="btn-primary">Sign up</a>
+        </div>
+    </div>
 
     <main>
         <section class="services-hero">
@@ -774,5 +862,26 @@
             <p>&copy; 2024 WeWinLeads. Helping Brisbane to Gold Coast B2B businesses achieve predictable growth.</p>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle function
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const burgerMenu = document.querySelector('.burger-menu');
+
+            mobileMenu.classList.toggle('active');
+            burgerMenu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const mobileMenu = document.getElementById('mobileMenu');
+                const burgerMenu = document.querySelector('.burger-menu');
+                mobileMenu.classList.remove('active');
+                burgerMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
