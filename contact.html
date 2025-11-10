@@ -119,23 +119,65 @@
             background: #fefbf8;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 2rem;
-        }
-
-        .contact-form {
+        /* Booking Calendar Section */
+        .booking-section {
             background: #fff;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(39, 38, 31, 0.08);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 40px rgba(39, 38, 31, 0.1);
             border: 1px solid #e3d5cf;
+            margin-bottom: 4rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .booking-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .booking-header h2 {
+            color: #f66352;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .booking-header p {
+            color: #8a6d55;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .calendar-container {
+            width: 100%;
+            height: 650px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border: 2px solid #e9ecef;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .calendar-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Content Sections Grid */
+        .content-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
 
-        .contact-info {
+        .content-section {
             display: flex;
             flex-direction: column;
             gap: 2rem;
@@ -277,22 +319,55 @@
             padding: 2rem 0;
         }
 
-        @media (max-width: 768px) {
-            .contact-grid {
+        @media (max-width: 968px) {
+            .content-sections {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .booking-section {
+                padding: 2rem 1.5rem;
+                margin-bottom: 3rem;
+            }
+
+            .booking-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .calendar-container {
+                height: 550px;
             }
 
             .contact-hero h1 {
                 font-size: 2.2rem;
             }
 
-            .pricing-selection {
-                grid-template-columns: 1fr;
+            .content-sections {
+                gap: 1.5rem;
+                margin-top: 2rem;
             }
 
             .nav-links {
                 display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .booking-section {
+                padding: 1.5rem 1rem;
+            }
+
+            .booking-header h2 {
+                font-size: 1.6rem;
+            }
+
+            .booking-header p {
+                font-size: 1rem;
+            }
+
+            .calendar-container {
+                height: 500px;
             }
         }
     </style>
@@ -322,47 +397,56 @@
 
     <section class="contact-content">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-form">
-                    <h2 style="color: #f66352; margin-bottom: 2rem;">Book Your Free Strategy Call</h2>
-                    <p style="color: #8a6d55; margin-bottom: 2rem;">Schedule a 15-minute call to discover how we can build your predictable client growth system</p>
+            <!-- Booking Calendar Section -->
+            <div class="booking-section">
+                <div class="booking-header">
+                    <h2>Book Your Free Strategy Call</h2>
+                    <p>Schedule a 15-minute consultation to discover how we can build your predictable client growth system. No pressure, just valuable insights tailored to your Brisbane or Gold Coast business.</p>
+                </div>
 
-                    <!-- Cal inline embed code begins -->
-                    <div style="width:100%;height:600px;background:#f8f9fa;border-radius:8px;border:2px solid #e9ecef;" id="my-cal-inline-15min">
-                        <div style="display:flex;align-items:center;justify-content:center;height:100%;text-align:center;padding:2rem;">
-                            <div>
-                                <h3 style="color:#f66352;margin-bottom:1rem;">Cal.com Booking Calendar</h3>
-                                <p style="color:#8a6d55;margin-bottom:2rem;">The booking calendar will load when the site is deployed with HTTPS.<br>For now, you can see the layout and design.</p>
-                                <div style="background:#fff;padding:2rem;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1);">
-                                    <p style="color:#f66352;font-weight:600;margin-bottom:1rem;">📅 15-Minute Strategy Call</p>
-                                    <p style="color:#8a6d55;font-size:0.9rem;">Book your free consultation to discover how we can build your predictable client growth system</p>
-                                    <div style="margin-top:1.5rem;padding:1rem;background:#f66352;color:white;border-radius:5px;">
-                                        <strong>Calendar Preview</strong><br>
-                                        <small>Available slots will appear here when live</small>
-                                    </div>
+                <!-- Cal inline embed code begins -->
+                <div class="calendar-container" id="my-cal-inline-15min">
+                    <div style="display:flex;align-items:center;justify-content:center;height:100%;text-align:center;padding:2rem;">
+                        <div>
+                            <h3 style="color:#f66352;margin-bottom:1rem;">📅 Cal.com Booking Calendar</h3>
+                            <p style="color:#8a6d55;margin-bottom:2rem;">The booking calendar will load when the site is deployed with HTTPS.<br>For now, you can see the layout and design.</p>
+                            <div style="background:#fff;padding:2rem;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+                                <p style="color:#f66352;font-weight:600;margin-bottom:1rem;">🕒 15-Minute Strategy Call</p>
+                                <p style="color:#8a6d55;font-size:0.9rem;">Book your free consultation to discover how we can build your predictable client growth system</p>
+                                <div style="margin-top:1.5rem;padding:1rem;background:#f66352;color:white;border-radius:5px;">
+                                    <strong>📅 Calendar Preview</strong><br>
+                                    <small>Available time slots will appear here when live</small>
+                                </div>
+                                <div style="margin-top:1rem;font-size:0.85rem;color:#8a6d55;">
+                                    <p>✅ Landscape/horizontal layout optimized<br>
+                                    ✅ Contained scrolling within calendar<br>
+                                    ✅ Responsive design for all devices</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <script type="text/javascript">
-                      // Cal.com embed will load when deployed with HTTPS
-                      if (window.location.protocol === 'https:') {
-                        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-                        Cal("init", "15min", {origin:"https://app.cal.com"});
-
-                        Cal.ns["15min"]("inline", {
-                          elementOrSelector:"#my-cal-inline-15min",
-                          config: {"layout":"month_view"},
-                          calLink: "wewinleads/15min",
-                        });
-
-                        Cal.ns["15min"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#292929"},"dark":{"cal-brand":"#ffffff"}},"hideEventTypeDetails":false,"layout":"month_view"});
-                      }
-                    </script>
-                    <!-- Cal inline embed code ends -->
                 </div>
+                <script type="text/javascript">
+                  // Cal.com embed will load when deployed with HTTPS
+                  if (window.location.protocol === 'https:') {
+                    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                    Cal("init", "15min", {origin:"https://app.cal.com"});
 
-                <div class="contact-info">
+                    Cal.ns["15min"]("inline", {
+                      elementOrSelector:"#my-cal-inline-15min",
+                      config: {"layout":"month_view", "theme":"light"},
+                      calLink: "wewinleads/15min",
+                    });
+
+                    Cal.ns["15min"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#f66352","cal-brand-subtle":"#f66352"},"dark":{"cal-brand":"#f66352"}},"hideEventTypeDetails":false,"layout":"month_view"});
+                  }
+                </script>
+                <!-- Cal inline embed code ends -->
+            </div>
+
+            <!-- Content Sections -->
+            <div class="content-sections">
+                <div class="content-section">
                     <div class="info-card">
                         <h3>What to Expect on Your Call</h3>
                         <ul>
@@ -374,7 +458,9 @@
                             <li>No pressure, just valuable insights</li>
                         </ul>
                     </div>
+                </div>
 
+                <div class="content-section">
                     <div class="info-card">
                         <h3>Why Choose WeWinLeads?</h3>
                         <ul>
@@ -386,7 +472,9 @@
                             <li>Focus on commercial contracts and quality leads</li>
                         </ul>
                     </div>
+                </div>
 
+                <div class="content-section">
                     <div class="info-card">
                         <h3>Perfect For Businesses That:</h3>
                         <ul>
