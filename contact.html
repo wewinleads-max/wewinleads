@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact WeWinLeads | B2B Lead Generation Brisbane Gold Coast | Free Strategy Call</title>
-    <meta name="description" content="Contact WeWinLeads for B2B lead generation services. Book a free strategy call to discover how we help Brisbane to Gold Coast businesses secure commercial contracts.">
+    <title>Contact WeWinLeads | Free B2B Strategy Call Brisbane</title>
+    <meta name="description" content="Contact WeWinLeads for B2B lead generation. Book a free strategy call to discover how we help Brisbane to Gold Coast businesses grow.">
     <meta name="keywords" content="contact WeWinLeads, B2B strategy call, lead generation consultation, Brisbane Gold Coast business growth">
     <meta name="robots" content="index, follow">
 
@@ -505,6 +505,113 @@
                 min-height: 400px;
             }
         }
+
+        /* Burger Menu Styles */
+        .burger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+            gap: 4px;
+        }
+
+        .burger-line {
+            width: 24px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .burger-menu.active .burger-line:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .burger-menu.active .burger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger-menu.active .burger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 12px;
+            right: 12px;
+            background: rgba(246, 99, 82, 0.98);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 24px;
+            z-index: 999;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            margin: 0 0 24px 0;
+            padding: 0;
+        }
+
+        .mobile-nav-links li {
+            margin-bottom: 16px;
+        }
+
+        .mobile-nav-links a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .mobile-nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .mobile-nav-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .mobile-nav-actions .btn-primary,
+        .mobile-nav-actions .btn-secondary {
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+        }
+
+        /* Update responsive navigation to use burger menu */
+        @media (max-width: 768px) {
+            .nav-links,
+            .nav-actions {
+                display: none;
+            }
+
+            .burger-menu {
+                display: flex;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .submit-btn {
+                padding: 14px 32px;
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -514,14 +621,36 @@
                 <img src="full logo white trans.png" alt="WeWinLeads" />
             </a>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="brisbane-b2b-leads.html">Brisbane</a></li>
-                <li><a href="gold-coast-business-leads.html">Gold Coast</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">How it works</a></li>
             </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn-secondary">Get a demo</a>
+                <a href="contact.html" class="btn-primary">Sign up</a>
+            </div>
+            <div class="burger-menu" onclick="toggleMobileMenu()">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
         </nav>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">How it works</a></li>
+        </ul>
+        <div class="mobile-nav-actions">
+            <a href="contact.html" class="btn-secondary">Get a demo</a>
+            <a href="contact.html" class="btn-primary">Sign up</a>
+        </div>
+    </div>
 
     <section class="contact-hero">
         <div class="container">
@@ -532,66 +661,147 @@
 
     <section class="contact-content">
         <div class="container">
-            <!-- Booking Calendar Section -->
+            <!-- Lead Qualifying Form Section -->
             <div class="booking-section">
                 <div class="booking-header">
-                    <h2>Book Your Free Strategy Call</h2>
-                    <p>Schedule a 15-minute consultation to discover how we can build your predictable client growth system. No pressure, just valuable insights tailored to your Brisbane or Gold Coast business.</p>
+                    <h2>Get Your Free B2B Growth Strategy</h2>
+                    <p>Tell us about your business and we'll send you a custom strategy to transform your lead generation. No generic advice - just actionable insights for your Brisbane or Gold Coast business.</p>
                 </div>
 
-                <!-- Cal inline embed code begins -->
-                <div class="calendar-container" id="my-cal-inline-15min"></div>
-                <script type="text/javascript">
-                  (function (C, A, L) {
-                    let p = function (a, ar) { a.q.push(ar); };
-                    let d = C.document;
-                    C.Cal = C.Cal || function () {
-                      let cal = C.Cal;
-                      let ar = arguments;
-                      if (!cal.loaded) {
-                        cal.ns = {};
-                        cal.q = cal.q || [];
-                        d.head.appendChild(d.createElement("script")).src = A;
-                        cal.loaded = true;
-                      }
-                      if (ar[0] === L) {
-                        const api = function () { p(api, arguments); };
-                        const namespace = ar[1];
-                        api.q = api.q || [];
-                        if(typeof namespace === "string"){
-                          cal.ns[namespace] = cal.ns[namespace] || api;
-                          p(cal.ns[namespace], ar);
-                          p(cal, ["initNamespace", namespace]);
-                        } else p(cal, ar);
-                        return;
-                      }
-                      p(cal, ar);
-                    };
-                  })(window, "https://app.cal.com/embed/embed.js", "init");
+                <form id="leadForm" class="lead-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
 
-                  Cal("init", "15min", {origin:"https://app.cal.com"});
+                        <div class="form-group">
+                            <label for="email">Business Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
 
-                  Cal.ns["15min"]("inline", {
-                    elementOrSelector:"#my-cal-inline-15min",
-                    config: {"layout":"month_view", "theme":"light"},
-                    calLink: "wewinleads/15min"
-                  });
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
 
-                  Cal.ns["15min"]("ui", {
-                    "cssVarsPerTheme":{
-                      "light":{
-                        "cal-brand":"#f66352",
-                        "cal-brand-subtle":"#f66352"
-                      },
-                      "dark":{
-                        "cal-brand":"#f66352"
-                      }
-                    },
-                    "hideEventTypeDetails":false,
-                    "layout":"month_view"
-                  });
-                </script>
-                <!-- Cal inline embed code ends -->
+                        <div class="form-group">
+                            <label for="companyName">Company Name *</label>
+                            <input type="text" id="companyName" name="companyName" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="industry">What industry are you in? *</label>
+                            <select id="industry" name="industry" required>
+                                <option value="">Select your industry...</option>
+                                <option value="construction">Construction & Building</option>
+                                <option value="professional-services">Professional Services (Legal, Accounting, Consulting)</option>
+                                <option value="technology">Technology & Software</option>
+                                <option value="manufacturing">Manufacturing & Industrial</option>
+                                <option value="healthcare">Healthcare & Medical</option>
+                                <option value="finance">Finance & Insurance</option>
+                                <option value="tourism">Tourism & Hospitality</option>
+                                <option value="real-estate">Real Estate & Property</option>
+                                <option value="marketing">Marketing & Advertising</option>
+                                <option value="education">Education & Training</option>
+                                <option value="logistics">Logistics & Transportation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="location">Business Location *</label>
+                            <select id="location" name="location" required>
+                                <option value="">Select your location...</option>
+                                <option value="brisbane-city">Brisbane City</option>
+                                <option value="brisbane-south">Brisbane South</option>
+                                <option value="brisbane-north">Brisbane North</option>
+                                <option value="brisbane-west">Brisbane West</option>
+                                <option value="brisbane-east">Brisbane East</option>
+                                <option value="gold-coast">Gold Coast</option>
+                                <option value="sunshine-coast">Sunshine Coast</option>
+                                <option value="ipswich">Ipswich</option>
+                                <option value="logan">Logan</option>
+                                <option value="other-qld">Other Queensland</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="teamSize">What's your team size? *</label>
+                            <select id="teamSize" name="teamSize" required>
+                                <option value="">Select team size...</option>
+                                <option value="solo">Just me (Solo entrepreneur)</option>
+                                <option value="2-5">2-5 employees</option>
+                                <option value="6-10">6-10 employees</option>
+                                <option value="11-25">11-25 employees</option>
+                                <option value="26-50">26-50 employees</option>
+                                <option value="50+">50+ employees</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="revenue">What's your approximate annual revenue? *</label>
+                            <select id="revenue" name="revenue" required>
+                                <option value="">Select revenue range...</option>
+                                <option value="startup">Startup (Under $100K)</option>
+                                <option value="100k-500k">$100K - $500K</option>
+                                <option value="500k-1m">$500K - $1M</option>
+                                <option value="1m-2m">$1M - $2M</option>
+                                <option value="2m-5m">$2M - $5M</option>
+                                <option value="5m+">$5M+</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="currentMarketing">What's your biggest challenge with lead generation right now? *</label>
+                            <select id="currentMarketing" name="currentMarketing" required>
+                                <option value="">Select your main challenge...</option>
+                                <option value="no-leads">Not getting enough leads</option>
+                                <option value="poor-quality">Getting leads but they're poor quality</option>
+                                <option value="inconsistent">Feast or famine - inconsistent lead flow</option>
+                                <option value="expensive">Leads are too expensive</option>
+                                <option value="no-system">No systematic approach to lead generation</option>
+                                <option value="wrong-audience">Can't reach decision-makers</option>
+                                <option value="competition">Too much competition</option>
+                                <option value="seasonal">Seasonal fluctuations</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="timeline">How urgent is solving this problem? *</label>
+                            <select id="timeline" name="timeline" required>
+                                <option value="">Select timeline...</option>
+                                <option value="immediate">Urgent - need results within 30 days</option>
+                                <option value="soon">Important - need results within 3 months</option>
+                                <option value="planning">Planning - would like results within 6 months</option>
+                                <option value="research">Just researching options for now</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="budget">What's your monthly marketing budget? *</label>
+                            <select id="budget" name="budget" required>
+                                <option value="">Select budget range...</option>
+                                <option value="under-1k">Under $1,000</option>
+                                <option value="1k-2k">$1,000 - $2,000</option>
+                                <option value="2k-5k">$2,000 - $5,000</option>
+                                <option value="5k-10k">$5,000 - $10,000</option>
+                                <option value="10k+">$10,000+</option>
+                                <option value="depends">Depends on ROI</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="additionalInfo">Tell us more about your business and goals (optional)</label>
+                            <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="What types of clients do you want to attract? What's worked/not worked for you before? Any specific goals or challenges?"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Get My Custom Strategy</button>
+                        <p class="privacy-note">We respect your privacy. Your information will only be used to create your custom strategy.</p>
+                    </div>
+                </form>
             </div>
 
             <!-- Content Sections -->
@@ -734,5 +944,5 @@
             });
         });
     </script>
-</body>
+    <script>\n        // Lead form submission\n        document.addEventListener('DOMContentLoaded', function() {\n            document.getElementById('leadForm').addEventListener('submit', function(e) {\n                e.preventDefault();\n                \n                const formData = new FormData(this);\n                const formObject = {};\n                formData.forEach((value, key) => {\n                    formObject[key] = value;\n                });\n                \n                // Create email content\n                const emailBody = `New Lead Qualification Form Submission\n\nFull Name: ${formObject.fullName}\nEmail: ${formObject.email}\nPhone: ${formObject.phone || 'Not provided'}\nCompany: ${formObject.companyName}\n\nIndustry: ${formObject.industry}\nLocation: ${formObject.location}\nTeam Size: ${formObject.teamSize}\nRevenue: ${formObject.revenue}\n\nMain Challenge: ${formObject.currentMarketing}\nTimeline: ${formObject.timeline}\nBudget: ${formObject.budget}\n\nAdditional Info: ${formObject.additionalInfo || 'None provided'}\n\nSubmitted on: ${new Date().toLocaleString()}`;\n                \n                // Create mailto link\n                const mailtoLink = `mailto:hello@wewinleads.com?subject=New Lead Qualification - ${formObject.fullName}&body=${encodeURIComponent(emailBody)}`;\n                \n                // Open email client\n                window.location.href = mailtoLink;\n                \n                // Show success message\n                const submitBtn = this.querySelector('.submit-btn');\n                const originalText = submitBtn.textContent;\n                submitBtn.textContent = 'Email Opened! Please Send';\n                submitBtn.style.background = '#22c55e';\n                \n                setTimeout(() => {\n                    submitBtn.textContent = originalText;\n                    submitBtn.style.background = '#f66352';\n                }, 3000);\n            });\n        });\n\n        // Mobile menu toggle function\n        function toggleMobileMenu() {\n            const mobileMenu = document.getElementById('mobileMenu');\n            const burgerMenu = document.querySelector('.burger-menu');\n\n            mobileMenu.classList.toggle('active');\n            burgerMenu.classList.toggle('active');\n        }\n\n        // Close mobile menu when clicking on a link\n        document.querySelectorAll('.mobile-nav-links a').forEach(link => {\n            link.addEventListener('click', () => {\n                const mobileMenu = document.getElementById('mobileMenu');\n                const burgerMenu = document.querySelector('.burger-menu');\n                mobileMenu.classList.remove('active');\n                burgerMenu.classList.remove('active');\n            });\n        });\n    </script>\n</body>
 </html>

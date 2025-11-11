@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brisbane B2B Lead Generation | Commercial Contracts & Business Growth | WeWinLeads</title>
+    <title>Brisbane B2B Lead Generation | WeWinLeads</title>
     <meta name="description" content="Brisbane B2B lead generation specialists. Help local businesses secure commercial contracts through SEO, strategic ads & AI outreach. End the feast or famine cycle.">
     <meta name="keywords" content="Brisbane B2B leads, Brisbane commercial contracts, Brisbane business marketing, B2B lead generation Brisbane, commercial tender Brisbane">
     <meta name="robots" content="index, follow">
@@ -12,26 +12,69 @@
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "@id": "https://wewinleads.com.au/brisbane",
+        "@id": "https://wewinleads.com.au/brisbane-b2b-leads#localbusiness",
         "name": "WeWinLeads Brisbane",
-        "description": "B2B Lead Generation Services for Brisbane Businesses",
+        "description": "B2B Lead Generation Services for Brisbane Businesses - SEO, strategic advertising, and AI-powered outreach specifically for Brisbane commercial markets",
         "url": "https://wewinleads.com.au/brisbane-b2b-leads",
+        "sameAs": [
+            "https://wewinleads.com.au"
+        ],
+        "parentOrganization": {
+            "@type": "Organization",
+            "@id": "https://wewinleads.com.au/#organization",
+            "name": "WeWinLeads"
+        },
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Brisbane",
             "addressRegion": "Queensland",
-            "addressCountry": "Australia"
+            "addressCountry": "Australia",
+            "postalCode": "4000"
         },
         "areaServed": {
             "@type": "City",
             "name": "Brisbane",
             "containedInPlace": {
                 "@type": "State",
-                "name": "Queensland"
+                "name": "Queensland",
+                "containedInPlace": {
+                    "@type": "Country",
+                    "name": "Australia"
+                }
             }
         },
         "serviceType": ["B2B Lead Generation", "SEO", "Commercial Contract Assistance", "Strategic Advertising"],
-        "priceRange": "$2000-$3000"
+        "priceRange": "$2000-$3000",
+        "telephone": "Contact via website",
+        "email": "Contact via website",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "areaServed": "Brisbane",
+            "url": "https://wewinleads.com.au/contact.html"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Brisbane B2B Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Brisbane SEO Services",
+                        "description": "Local Brisbane SEO optimization for commercial businesses"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Brisbane Strategic Advertising",
+                        "description": "Targeted advertising campaigns for Brisbane B2B market"
+                    }
+                }
+            ]
+        }
     }
     </script>
 
@@ -488,8 +531,27 @@
                 <a href="contact.html" class="btn-secondary">Get a demo</a>
                 <a href="contact.html" class="btn-primary">Sign up</a>
             </div>
+            <div class="burger-menu" onclick="toggleMobileMenu()">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
         </nav>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">How it works</a></li>
+        </ul>
+        <div class="mobile-nav-actions">
+            <a href="contact.html" class="btn-secondary">Get a demo</a>
+            <a href="contact.html" class="btn-primary">Sign up</a>
+        </div>
+    </div>
 
     <section class="hero-local">
         <div class="container">
@@ -658,6 +720,6 @@
             <p>&copy; 2024 WeWinLeads Brisbane. Connecting Brisbane businesses with commercial growth opportunities.</p>
             <p>Brisbane B2B Lead Generation | Commercial Contracts | Strategic Marketing</p>
         </div>
-    </footer>
+    </footer>\n\n    <script>\n        // Mobile menu toggle function\n        function toggleMobileMenu() {\n            const mobileMenu = document.getElementById('mobileMenu');\n            const burgerMenu = document.querySelector('.burger-menu');\n\n            mobileMenu.classList.toggle('active');\n            burgerMenu.classList.toggle('active');\n        }\n\n        // Close mobile menu when clicking on a link\n        document.querySelectorAll('.mobile-nav-links a').forEach(link => {\n            link.addEventListener('click', () => {\n                const mobileMenu = document.getElementById('mobileMenu');\n                const burgerMenu = document.querySelector('.burger-menu');\n                mobileMenu.classList.remove('active');\n                burgerMenu.classList.remove('active');\n            });\n        });\n    </script>
 </body>
 </html>

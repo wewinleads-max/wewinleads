@@ -3,25 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B2B Lead Generation Pricing | Flexible Investment Options | WeWinLeads Brisbane Gold Coast</title>
-    <meta name="description" content="Transparent B2B lead generation pricing for Brisbane to Gold Coast businesses. Retainer, performance-based, per-appointment, and hybrid pricing models available.">
+    <title>B2B Lead Generation Pricing | WeWinLeads Brisbane</title>
+    <meta name="description" content="B2B lead generation pricing for Brisbane to Gold Coast businesses. Retainer, performance-based, per-appointment, and hybrid models available.">
     <meta name="keywords" content="B2B lead generation pricing, Brisbane marketing costs, Gold Coast business growth pricing, performance based marketing, flexible pricing models">
     <meta name="robots" content="index, follow">
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "PriceSpecification",
+        "@type": "Service",
+        "@id": "https://wewinleads.com.au/pricing.html#pricing",
         "name": "B2B Lead Generation Pricing",
-        "description": "Flexible pricing models for B2B lead generation services",
-        "priceCurrency": "AUD",
-        "price": "2000-3000",
-        "priceRange": "$2000-$3000",
+        "description": "Flexible pricing models for B2B lead generation services - Retainer, Performance-based, Per-appointment, and Hybrid options",
         "provider": {
             "@type": "Organization",
+            "@id": "https://wewinleads.com.au/#organization",
             "name": "WeWinLeads",
-            "areaServed": ["Brisbane", "Gold Coast"]
-        }
+            "url": "https://wewinleads.com.au"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Brisbane"
+            },
+            {
+                "@type": "City",
+                "name": "Gold Coast"
+            }
+        ],
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Retainer + Setup",
+                "description": "Complete system with ongoing optimization and management",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "priceCurrency": "AUD",
+                    "price": "2000-3000"
+                }
+            },
+            {
+                "@type": "Offer",
+                "name": "Performance Based",
+                "description": "Pay only when we deliver results - perfect for risk-free growth",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "priceCurrency": "AUD",
+                    "price": "15-25% of Sales"
+                }
+            },
+            {
+                "@type": "Offer",
+                "name": "Per Appointment",
+                "description": "Ideal for businesses focused on meeting qualified prospects immediately",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "priceCurrency": "AUD",
+                    "price": "150-300"
+                }
+            },
+            {
+                "@type": "Offer",
+                "name": "Hybrid Model",
+                "description": "Best of both worlds - minimal upfront with performance incentives",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "priceCurrency": "AUD",
+                    "price": "1000 + 5-10% Commission"
+                }
+            }
+        ]
     }
     </script>
 
@@ -542,6 +593,140 @@
             color: #27261f !important;
             border-color: rgba(255, 255, 255, 0.5) !important;
         }
+
+        /* Burger Menu Styles */
+        .burger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+            gap: 4px;
+        }
+
+        .burger-line {
+            width: 24px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .burger-menu.active .burger-line:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .burger-menu.active .burger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger-menu.active .burger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 12px;
+            right: 12px;
+            background: rgba(246, 99, 82, 0.98);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 24px;
+            z-index: 999;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            margin: 0 0 24px 0;
+            padding: 0;
+        }
+
+        .mobile-nav-links li {
+            margin-bottom: 16px;
+        }
+
+        .mobile-nav-links a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .mobile-nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .mobile-nav-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .mobile-nav-actions .btn-primary,
+        .mobile-nav-actions .btn-secondary {
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+        }
+
+        /* Responsive Navigation */
+        @media (max-width: 1024px) {
+            header {
+                top: 12px !important;
+                left: 12px !important;
+                right: 12px !important;
+            }
+
+            nav {
+                padding: 18px 32px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 100px !important;
+            }
+
+            header {
+                top: 8px !important;
+                left: 8px !important;
+                right: 8px !important;
+                border-radius: 20px !important;
+            }
+
+            nav {
+                padding: 16px 20px;
+                justify-content: space-between;
+            }
+
+            .nav-links,
+            .nav-actions {
+                display: none;
+            }
+
+            .burger-menu {
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body>
@@ -560,8 +745,27 @@
                 <a href="contact.html" class="btn-secondary">Get a demo</a>
                 <a href="contact.html" class="btn-primary">Sign up</a>
             </div>
+            <div class="burger-menu" onclick="toggleMobileMenu()">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
         </nav>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">How it works</a></li>
+        </ul>
+        <div class="mobile-nav-actions">
+            <a href="contact.html" class="btn-secondary">Get a demo</a>
+            <a href="contact.html" class="btn-primary">Sign up</a>
+        </div>
+    </div>
 
     <section class="pricing-hero">
         <div class="container">
@@ -811,6 +1015,6 @@
             <p>&copy; 2024 WeWinLeads. Transparent pricing for Brisbane to Gold Coast B2B growth.</p>
             <p>Flexible investment options designed for your success.</p>
         </div>
-    </footer>
+    </footer>\n\n    <script>\n        // Mobile menu toggle function\n        function toggleMobileMenu() {\n            const mobileMenu = document.getElementById('mobileMenu');\n            const burgerMenu = document.querySelector('.burger-menu');\n\n            mobileMenu.classList.toggle('active');\n            burgerMenu.classList.toggle('active');\n        }\n\n        // Close mobile menu when clicking on a link\n        document.querySelectorAll('.mobile-nav-links a').forEach(link => {\n            link.addEventListener('click', () => {\n                const mobileMenu = document.getElementById('mobileMenu');\n                const burgerMenu = document.querySelector('.burger-menu');\n                mobileMenu.classList.remove('active');\n                burgerMenu.classList.remove('active');\n            });\n        });\n    </script>
 </body>
 </html>

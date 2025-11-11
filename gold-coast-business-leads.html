@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gold Coast B2B Lead Generation | Business Growth & Commercial Contracts | WeWinLeads</title>
-    <meta name="description" content="Gold Coast B2B lead generation specialists. Help tourism, construction & professional services secure commercial contracts. Proven growth systems for coastal businesses.">
+    <title>Gold Coast B2B Lead Generation | WeWinLeads</title>
+    <meta name="description" content="Gold Coast B2B lead generation specialists. Help tourism, construction & professional services secure contracts. Proven growth systems.">
     <meta name="keywords" content="Gold Coast B2B leads, Gold Coast business marketing, commercial contracts Gold Coast, B2B lead generation Gold Coast, Gold Coast business growth">
     <meta name="robots" content="index, follow">
 
@@ -12,26 +12,69 @@
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "@id": "https://wewinleads.com.au/gold-coast",
+        "@id": "https://wewinleads.com.au/gold-coast-business-leads#localbusiness",
         "name": "WeWinLeads Gold Coast",
-        "description": "B2B Lead Generation Services for Gold Coast Businesses",
+        "description": "B2B Lead Generation Services for Gold Coast Businesses - Specializing in tourism, construction, and professional services with seasonal optimization strategies",
         "url": "https://wewinleads.com.au/gold-coast-business-leads",
+        "sameAs": [
+            "https://wewinleads.com.au"
+        ],
+        "parentOrganization": {
+            "@type": "Organization",
+            "@id": "https://wewinleads.com.au/#organization",
+            "name": "WeWinLeads"
+        },
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Gold Coast",
             "addressRegion": "Queensland",
-            "addressCountry": "Australia"
+            "addressCountry": "Australia",
+            "postalCode": "4217"
         },
         "areaServed": {
             "@type": "City",
             "name": "Gold Coast",
             "containedInPlace": {
                 "@type": "State",
-                "name": "Queensland"
+                "name": "Queensland",
+                "containedInPlace": {
+                    "@type": "Country",
+                    "name": "Australia"
+                }
             }
         },
         "serviceType": ["B2B Lead Generation", "SEO", "Tourism Business Marketing", "Strategic Advertising"],
-        "priceRange": "$2000-$3000"
+        "priceRange": "$2000-$3000",
+        "telephone": "Contact via website",
+        "email": "Contact via website",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "areaServed": "Gold Coast",
+            "url": "https://wewinleads.com.au/contact.html"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Gold Coast B2B Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Gold Coast Tourism Marketing",
+                        "description": "Specialized marketing for Gold Coast tourism and hospitality businesses"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Seasonal Business Optimization",
+                        "description": "Year-round growth strategies for Gold Coast seasonal businesses"
+                    }
+                }
+            ]
+        }
     }
     </script>
 
@@ -530,8 +573,27 @@
                 <a href="contact.html" class="btn-secondary">Get a demo</a>
                 <a href="contact.html" class="btn-primary">Sign up</a>
             </div>
+            <div class="burger-menu" onclick="toggleMobileMenu()">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
         </nav>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">How it works</a></li>
+        </ul>
+        <div class="mobile-nav-actions">
+            <a href="contact.html" class="btn-secondary">Get a demo</a>
+            <a href="contact.html" class="btn-primary">Sign up</a>
+        </div>
+    </div>
 
     <section class="hero-local">
         <div class="container">
@@ -735,6 +797,6 @@
             <p>&copy; 2024 WeWinLeads Gold Coast. Connecting coastal businesses with year-round commercial opportunities.</p>
             <p>Gold Coast B2B Lead Generation | Tourism Industry Specialists | Seasonal Business Solutions</p>
         </div>
-    </footer>
+    </footer>\n\n    <script>\n        // Mobile menu toggle function\n        function toggleMobileMenu() {\n            const mobileMenu = document.getElementById('mobileMenu');\n            const burgerMenu = document.querySelector('.burger-menu');\n\n            mobileMenu.classList.toggle('active');\n            burgerMenu.classList.toggle('active');\n        }\n\n        // Close mobile menu when clicking on a link\n        document.querySelectorAll('.mobile-nav-links a').forEach(link => {\n            link.addEventListener('click', () => {\n                const mobileMenu = document.getElementById('mobileMenu');\n                const burgerMenu = document.querySelector('.burger-menu');\n                mobileMenu.classList.remove('active');\n                burgerMenu.classList.remove('active');\n            });\n        });\n    </script>
 </body>
 </html>
