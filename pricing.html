@@ -555,11 +555,24 @@
             gap: 12px;
         }
 
-        .mobile-nav-actions .btn-primary,
-        .mobile-nav-actions .btn-secondary {
+        .mobile-nav-actions .btn-primary {
             width: 100%;
             text-align: center;
-            padding: 12px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            display: inline-block;
+            background: white;
+            color: #f66352;
+            border-color: white;
+        }
+
+        .mobile-nav-actions .btn-primary:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-1px);
         }
 
         /* Responsive Navigation Styles */
@@ -744,7 +757,6 @@
                 <li><a href="contact.html">How it works</a></li>
             </ul>
             <div class="nav-actions">
-                <a href="contact.html" class="btn-secondary">Get a demo</a>
                 <a href="contact.html" class="btn-primary">Sign up</a>
             </div>
             <div class="burger-menu" onclick="toggleMobileMenu()">
@@ -764,7 +776,6 @@
             <li><a href="contact.html">How it works</a></li>
         </ul>
         <div class="mobile-nav-actions">
-            <a href="contact.html" class="btn-secondary">Get a demo</a>
             <a href="contact.html" class="btn-primary">Sign up</a>
         </div>
     </div>
