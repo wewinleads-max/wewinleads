@@ -513,6 +513,59 @@
             color: #27261f !important;
             border-color: rgba(255, 255, 255, 0.5) !important;
         }
+
+        /* Burger Menu Styles */
+        .burger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+            gap: 4px;
+        }
+
+        .burger-line {
+            width: 24px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .burger-menu.active .burger-line:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .burger-menu.active .burger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger-menu.active .burger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 12px;
+            right: 12px;
+            background: rgba(246, 99, 82, 0.98);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 24px;
+            z-index: 999;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .burger-menu {
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body>
