@@ -541,6 +541,9 @@
             cursor: pointer;
             padding: 8px;
             gap: 4px;
+            pointer-events: auto;
+            position: relative;
+            z-index: 1002;
         }
 
         .burger-line {
@@ -567,13 +570,13 @@
             display: none;
             position: fixed;
             top: 80px;
-            left: 12px;
-            right: 12px;
+            left: 8px;
+            right: 8px;
             background: rgba(246, 99, 82, 0.98);
             backdrop-filter: blur(20px);
             border-radius: 16px;
             padding: 24px;
-            z-index: 999;
+            z-index: 1001;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
@@ -648,6 +651,7 @@
             .burger-menu {
                 display: flex;
             }
+
 
             .services-hero h1 {
                 font-size: 40px;
@@ -735,6 +739,7 @@
             <a href="contact.html" class="btn-primary">Sign up</a>
         </div>
     </div>
+
 
     <main>
         <section class="services-hero">
@@ -894,12 +899,14 @@
 
     <script>
         // Mobile menu toggle function
-        function toggleMobileMenu() {
+        window.toggleMobileMenu = function() {
             const mobileMenu = document.getElementById('mobileMenu');
             const burgerMenu = document.querySelector('.burger-menu');
 
-            mobileMenu.classList.toggle('active');
-            burgerMenu.classList.toggle('active');
+            if (mobileMenu && burgerMenu) {
+                mobileMenu.classList.toggle('active');
+                burgerMenu.classList.toggle('active');
+            }
         }
 
         // Close mobile menu when clicking on a link
