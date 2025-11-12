@@ -63,13 +63,13 @@ nav {
 }
 
 .logo img {
-    height: 40px;
+    height: 48px;
     width: auto;
     transition: height 0.3s ease;
 }
 
 header.scrolled .logo img {
-    height: 36px;
+    height: 42px;
 }
 
 .nav-links {
