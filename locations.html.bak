@@ -431,6 +431,104 @@
             padding: 2rem 0;
         }
 
+        /* Burger Menu Styles */
+        .burger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+            z-index: 1001;
+        }
+
+        .burger-line {
+            width: 24px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .burger-menu.active .burger-line:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .burger-menu.active .burger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger-menu.active .burger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 8px;
+            right: 8px;
+            background: rgba(246, 99, 82, 0.98);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 24px;
+            z-index: 1001;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            margin: 0 0 24px 0;
+            padding: 0;
+        }
+
+        .mobile-nav-links li {
+            margin-bottom: 16px;
+        }
+
+        .mobile-nav-links a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .mobile-nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .mobile-nav-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .mobile-nav-actions .btn-primary {
+            width: 100%;
+            text-align: center;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            display: inline-block;
+            background: white;
+            color: #f66352;
+            border-color: white;
+        }
+
+        .mobile-nav-actions .btn-primary:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-1px);
+        }
+
         /* Responsive Navigation Styles */
         @media (max-width: 1024px) {
             body {
@@ -504,6 +602,15 @@
                 gap: 8px;
             }
 
+            .burger-menu {
+                display: flex;
+            }
+
+            .nav-links,
+            .nav-actions {
+                display: none;
+            }
+
             .btn-primary,
             .btn-secondary {
                 padding: 8px 12px;
@@ -549,143 +656,6 @@
             color: #27261f !important;
             border-color: rgba(255, 255, 255, 0.5) !important;
         }
-
-        /* Burger Menu Styles */
-        .burger-menu {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 8px;
-            gap: 4px;
-            pointer-events: auto;
-            position: relative;
-            z-index: 1002;
-        }
-
-        .burger-line {
-            width: 24px;
-            height: 3px;
-            background: white;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-
-        .burger-menu.active .burger-line:nth-child(1) {
-            transform: rotate(45deg) translate(6px, 6px);
-        }
-
-        .burger-menu.active .burger-line:nth-child(2) {
-            opacity: 0;
-        }
-
-        .burger-menu.active .burger-line:nth-child(3) {
-            transform: rotate(-45deg) translate(6px, -6px);
-        }
-
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 80px;
-            left: 8px;
-            right: 8px;
-            background: rgba(246, 99, 82, 0.98);
-            backdrop-filter: blur(20px);
-            border-radius: 16px;
-            padding: 24px;
-            z-index: 999;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .mobile-menu.active {
-            display: block;
-        }
-
-        .mobile-nav-links {
-            list-style: none;
-            margin: 0 0 24px 0;
-            padding: 0;
-        }
-
-        .mobile-nav-links li {
-            margin-bottom: 16px;
-        }
-
-        .mobile-nav-links a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 12px 16px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
-
-        .mobile-nav-links a:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .mobile-nav-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .mobile-nav-actions .btn-primary,
-        .mobile-nav-actions .btn-secondary {
-            width: 100%;
-            text-align: center;
-            padding: 12px;
-        }
-
-        /* Responsive Navigation */
-        @media (max-width: 1024px) {
-            header {
-                top: 12px !important;
-                left: 12px !important;
-                right: 12px !important;
-            }
-
-            nav {
-                padding: 18px 32px;
-            }
-
-            .nav-links {
-                gap: 20px;
-            }
-
-            .nav-links a {
-                font-size: 14px;
-                padding: 6px 12px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding-top: 100px !important;
-            }
-
-            header {
-                top: 8px !important;
-                left: 8px !important;
-                right: 8px !important;
-                border-radius: 20px !important;
-            }
-
-            nav {
-                padding: 16px 20px;
-                justify-content: space-between;
-            }
-
-            .nav-links,
-            .nav-actions {
-                display: none;
-            }
-
-            .burger-menu {
-                display: flex;
-            }
-        }
     </style>
 </head>
 <body>
@@ -701,8 +671,7 @@
                 <li><a href="contact.html">How it works</a></li>
             </ul>
             <div class="nav-actions">
-                <a href="contact.html" class="btn-secondary">Get a demo</a>
-                <a href="contact.html" class="btn-primary">Sign up</a>
+                <a href="contact.html" class="btn-primary">Get Quality Leads</a>
             </div>
             <div class="burger-menu" onclick="toggleMobileMenu()">
                 <div class="burger-line"></div>
@@ -721,8 +690,7 @@
             <li><a href="contact.html">How it works</a></li>
         </ul>
         <div class="mobile-nav-actions">
-            <a href="contact.html" class="btn-secondary">Get a demo</a>
-            <a href="contact.html" class="btn-primary">Sign up</a>
+            <a href="contact.html" class="btn-primary">Get Quality Leads</a>
         </div>
     </div>
 
@@ -921,6 +889,27 @@
         </div>
     </footer>
 
-\n\n        // Close mobile menu when clicking on a link\n        document.querySelectorAll('.mobile-nav-links a').forEach(link => {\n            link.addEventListener('click', () => {\n                const mobileMenu = document.getElementById('mobileMenu');\n                const burgerMenu = document.querySelector('.burger-menu');\n                mobileMenu.classList.remove('active');\n                burgerMenu.classList.remove('active');\n            });\n        });\n    </script>
+    <script>
+        // Mobile menu toggle function
+        window.toggleMobileMenu = function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const burgerMenu = document.querySelector('.burger-menu');
+
+            if (mobileMenu && burgerMenu) {
+                mobileMenu.classList.toggle('active');
+                burgerMenu.classList.toggle('active');
+            }
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const mobileMenu = document.getElementById('mobileMenu');
+                const burgerMenu = document.querySelector('.burger-menu');
+                mobileMenu.classList.remove('active');
+                burgerMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

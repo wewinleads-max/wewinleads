@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brisbane B2B Lead Generation | WeWinLeads</title>
-    <meta name="description" content="Brisbane B2B lead generation specialists. Help local businesses secure commercial contracts through SEO, strategic ads & AI outreach. End the feast or famine cycle.">
-    <meta name="keywords" content="Brisbane B2B leads, Brisbane commercial contracts, Brisbane business marketing, B2B lead generation Brisbane, commercial tender Brisbane">
+    <title>Gold Coast B2B Lead Generation | WeWinLeads</title>
+    <meta name="description" content="Gold Coast B2B lead generation specialists. Help tourism, construction & professional services secure contracts. Proven growth systems.">
+    <meta name="keywords" content="Gold Coast B2B leads, Gold Coast business marketing, commercial contracts Gold Coast, B2B lead generation Gold Coast, Gold Coast business growth">
     <meta name="robots" content="index, follow">
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "@id": "https://wewinleads.com.au/brisbane-b2b-leads#localbusiness",
-        "name": "WeWinLeads Brisbane",
-        "description": "B2B Lead Generation Services for Brisbane Businesses - SEO, strategic advertising, and AI-powered outreach specifically for Brisbane commercial markets",
-        "url": "https://wewinleads.com.au/brisbane-b2b-leads",
+        "@id": "https://wewinleads.com.au/gold-coast-business-leads#localbusiness",
+        "name": "WeWinLeads Gold Coast",
+        "description": "B2B Lead Generation Services for Gold Coast Businesses - Specializing in tourism, construction, and professional services with seasonal optimization strategies",
+        "url": "https://wewinleads.com.au/gold-coast-business-leads",
         "sameAs": [
             "https://wewinleads.com.au"
         ],
@@ -26,14 +26,14 @@
         },
         "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Brisbane",
+            "addressLocality": "Gold Coast",
             "addressRegion": "Queensland",
             "addressCountry": "Australia",
-            "postalCode": "4000"
+            "postalCode": "4217"
         },
         "areaServed": {
             "@type": "City",
-            "name": "Brisbane",
+            "name": "Gold Coast",
             "containedInPlace": {
                 "@type": "State",
                 "name": "Queensland",
@@ -43,34 +43,34 @@
                 }
             }
         },
-        "serviceType": ["B2B Lead Generation", "SEO", "Commercial Contract Assistance", "Strategic Advertising"],
+        "serviceType": ["B2B Lead Generation", "SEO", "Tourism Business Marketing", "Strategic Advertising"],
         "priceRange": "$2000-$3000",
         "telephone": "Contact via website",
         "email": "Contact via website",
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "customer service",
-            "areaServed": "Brisbane",
+            "areaServed": "Gold Coast",
             "url": "https://wewinleads.com.au/contact.html"
         },
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Brisbane B2B Services",
+            "name": "Gold Coast B2B Services",
             "itemListElement": [
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Brisbane SEO Services",
-                        "description": "Local Brisbane SEO optimization for commercial businesses"
+                        "name": "Gold Coast Tourism Marketing",
+                        "description": "Specialized marketing for Gold Coast tourism and hospitality businesses"
                     }
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Brisbane Strategic Advertising",
-                        "description": "Targeted advertising campaigns for Brisbane B2B market"
+                        "name": "Seasonal Business Optimization",
+                        "description": "Year-round growth strategies for Gold Coast seasonal businesses"
                     }
                 }
             ]
@@ -91,8 +91,8 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #27261f;
-            font-weight: 400;
             background: #fefbf8;
+            font-weight: 400;
             padding-top: 120px !important; /* Account for wider floating header */
         }
 
@@ -104,16 +104,16 @@
 
         /* Enhanced Disjointed Navigation - Always Consistent */
         header {
-            background: rgba(149, 6, 6, 0.7) !important;
-            backdrop-filter: blur(4px) !important;
-            -webkit-backdrop-filter: blur(4px) !important;
+            background: rgba(246, 99, 82, 0.95) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
             position: fixed !important;
             top: 20px !important;
             left: 20px !important;
             right: 20px !important;
             z-index: 1000 !important;
             border-radius: 24px !important;
-            box-shadow: 0 8px 32px rgba(39, 38, 31, 0.15), 0 4px 16px rgba(149, 6, 6, 0.3) !important;
+            box-shadow: 0 8px 32px rgba(39, 38, 31, 0.15), 0 4px 16px rgba(246, 99, 82, 0.3) !important;
             border: 1px solid rgba(255, 255, 255, 0.2) !important;
             transition: none !important;
             transform: none !important;
@@ -220,7 +220,7 @@
         }
 
         .hero-local {
-            background: #950606;
+            background: #f66352;
             color: white;
             padding: 11rem 0 5rem 0; /* Extended top padding to cover nav area */
             text-align: center;
@@ -228,7 +228,7 @@
         }
 
         .hero-local h1 {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Merriweather', serif;
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
             font-weight: 700;
@@ -237,7 +237,7 @@
         }
 
         .hero-local .location {
-            color: white;
+            color: #fbbf24;
             font-weight: bold;
         }
 
@@ -249,7 +249,7 @@
 
         .cta-button {
             display: inline-block;
-            background: #950606;
+            background: #f66352;
             color: white;
             padding: 1rem 2rem;
             text-decoration: none;
@@ -257,46 +257,47 @@
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s;
-            box-shadow: 0 4px 14px 0 rgba(149, 6, 6, 0.3);
+            box-shadow: 0 4px 14px 0 rgba(220, 38, 38, 0.3);
         }
 
         .cta-button:hover {
-            background: #7a0505;
+            background: #e55547;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px 0 rgba(149, 6, 6, 0.4);
+            box-shadow: 0 6px 20px 0 rgba(220, 38, 38, 0.4);
         }
 
-        .local-problems {
+        .coastal-advantage {
             padding: 4rem 0;
             background: #fefbf8;
         }
 
-        .problems-grid {
+        .advantage-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        .problem-card {
+        .advantage-card {
             background: white;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #fbbf24;
         }
 
-        .problem-card h3 {
-            color: #950606;
+        .advantage-card h3 {
+            color: #27261f;
             margin-bottom: 1rem;
             font-size: 1.3rem;
             font-weight: 600;
         }
 
-        .local-market {
+        .tourism-focus {
             padding: 4rem 0;
         }
 
-        .market-stats {
+        .tourism-stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
@@ -306,16 +307,16 @@
         .stat-card {
             text-align: center;
             padding: 2rem;
-            background: #950606;
+            background: #f66352;
             color: white;
             border-radius: 8px;
-            box-shadow: 0 4px 14px 0 rgba(30, 64, 175, 0.3);
+            box-shadow: 0 4px 14px 0 rgba(220, 38, 38, 0.3);
         }
 
         .stat-number {
             font-size: 2.5rem;
-            font-weight: 700;
-            color: #950606;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
         }
 
         .industries-section {
@@ -335,33 +336,70 @@
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-left: 4px solid #950606;
+            border-top: 4px solid #f66352;
         }
 
-        .case-study {
+        .industry-icon {
+            width: 60px;
+            height: 60px;
+            background: #e1a998;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(30, 64, 175, 0.3);
+        }
+
+        .seasonal-solution {
             padding: 4rem 0;
             background: #27261f;
             color: white;
         }
 
+        .seasonal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .seasonal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .season-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .case-study {
+            padding: 4rem 0;
+        }
+
         .case-content {
             max-width: 800px;
             margin: 0 auto;
-            text-align: center;
         }
 
         .testimonial {
             font-style: italic;
             font-size: 1.2rem;
             margin: 2rem 0;
-            background: rgba(255,255,255,0.1);
+            background: #fefbf8;
             padding: 2rem;
             border-radius: 8px;
-            border-left: 4px solid #950606;
+            border-left: 4px solid #f66352;
         }
 
         .local-keywords {
             padding: 4rem 0;
+            background: #fefbf8;
         }
 
         .keywords-grid {
@@ -372,7 +410,7 @@
         }
 
         .keyword-tag {
-            background: #950606;
+            background: #f66352;
             color: white;
             padding: 1rem;
             border-radius: 5px;
@@ -440,8 +478,8 @@
             top: 80px;
             left: 8px;
             right: 8px;
-            background: rgba(149, 6, 6, 0.98);
-            backdrop-filter: blur(4px);
+            background: rgba(246, 99, 82, 0.98);
+            backdrop-filter: blur(20px);
             border-radius: 16px;
             padding: 24px;
             z-index: 1001;
@@ -494,7 +532,7 @@
             border: 2px solid transparent;
             display: inline-block;
             background: white;
-            color: #950606;
+            color: #f66352;
             border-color: white;
         }
 
@@ -595,6 +633,10 @@
             .hero-local h1 {
                 font-size: 2.5rem;
             }
+
+            .seasonal-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Navigation Button Overrides */
@@ -620,8 +662,6 @@
             color: #27261f !important;
             border-color: rgba(255, 255, 255, 0.5) !important;
         }
-
-
     </style>
 </head>
 <body>
@@ -662,57 +702,57 @@
 
     <section class="hero-local">
         <div class="container">
-            <h1>Brisbane B2B Lead Generation That <span class="location">Actually Works</span></h1>
-            <p class="hero-subtitle">Help your Brisbane business secure commercial contracts and end the feast-or-famine cycle with our proven growth system</p>
-            <a href="#contact" class="cta-button">Get Brisbane Growth Strategy</a>
+            <h1><span class="location">Gold Coast</span> B2B Growth That Thrives Year-Round</h1>
+            <p class="hero-subtitle">Transform your coastal business from seasonal uncertainty to predictable commercial success with our proven lead generation system</p>
+            <a href="#contact" class="cta-button">Get Gold Coast Growth Plan</a>
         </div>
     </section>
 
-    <section class="local-problems">
+    <section class="coastal-advantage">
         <div class="container">
-            <h2 class="section-title">Brisbane B2B Business Challenges</h2>
-            <p class="section-subtitle">Why Queensland businesses struggle to find consistent commercial opportunities</p>
-            <div class="problems-grid">
-                <div class="problem-card">
-                    <h3>Limited Network Access</h3>
-                    <p>Brisbane's tight business community can be hard to penetrate. You know the right decision-makers exist, but you're not in their networks or chambers of commerce.</p>
+            <h2 class="section-title">Gold Coast Business Advantages</h2>
+            <p class="section-subtitle">Why Gold Coast is perfect for B2B growth - when you have the right system</p>
+            <div class="advantage-grid">
+                <div class="advantage-card">
+                    <h3>Tourism-Driven Economy</h3>
+                    <p>15+ million annual visitors create massive B2B opportunities. Hotels, attractions, restaurants, and events need reliable commercial services year-round.</p>
                 </div>
-                <div class="problem-card">
-                    <h3>Commercial Tender Competition</h3>
-                    <p>Major Brisbane commercial projects go to the same established players. You need insider knowledge of upcoming tenders and how to position your proposals.</p>
+                <div class="advantage-card">
+                    <h3>Rapid Population Growth</h3>
+                    <p>Gold Coast is Australia's fastest-growing city. New developments, infrastructure projects, and businesses create constant demand for B2B services.</p>
                 </div>
-                <div class="problem-card">
-                    <h3>Seasonal Business Fluctuations</h3>
-                    <p>Brisbane businesses often experience seasonal dips. Tourism, construction, and retail sectors need consistent lead flow to survive the quiet periods.</p>
+                <div class="advantage-card">
+                    <h3>Less Competition Than Brisbane</h3>
+                    <p>While Brisbane markets are saturated, Gold Coast offers more opportunities with less competition. Easier to dominate local search and networking.</p>
                 </div>
-                <div class="problem-card">
-                    <h3>Digital Presence Gap</h3>
-                    <p>Your competitors are being found online while you rely on word-of-mouth. When Brisbane businesses search for your services, they're finding everyone else.</p>
+                <div class="advantage-card">
+                    <h3>High-Value Clientele</h3>
+                    <p>Luxury tourism, high-end developments, and affluent residents mean higher-value commercial contracts and better profit margins for your services.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="local-market">
+    <section class="tourism-focus">
         <div class="container">
-            <h2 class="section-title">The Brisbane B2B Opportunity</h2>
-            <p class="section-subtitle">Why now is the perfect time to dominate Brisbane's commercial market</p>
-            <div class="market-stats">
+            <h2 class="section-title">The Gold Coast Opportunity</h2>
+            <p class="section-subtitle">Numbers that prove Gold Coast's commercial potential</p>
+            <div class="tourism-stats">
                 <div class="stat-card">
-                    <div class="stat-number">2.6M</div>
-                    <p>Brisbane metropolitan population driving business demand</p>
+                    <div class="stat-number">15M+</div>
+                    <p>Annual visitors requiring B2B support services</p>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">$180B</div>
-                    <p>Annual economic output creating commercial opportunities</p>
+                    <div class="stat-number">700K+</div>
+                    <p>Residents supporting local business growth</p>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">200K+</div>
-                    <p>Registered businesses needing B2B services</p>
+                    <div class="stat-number">$32B</div>
+                    <p>Annual tourism revenue creating B2B opportunities</p>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">85%</div>
-                    <p>Of Brisbane businesses search online for suppliers</p>
+                    <div class="stat-number">50K+</div>
+                    <p>Registered businesses needing commercial services</p>
                 </div>
             </div>
         </div>
@@ -720,32 +760,62 @@
 
     <section class="industries-section">
         <div class="container">
-            <h2 class="section-title">Brisbane Industries We Serve</h2>
-            <p class="section-subtitle">Proven results across Brisbane's key commercial sectors</p>
+            <h2 class="section-title">Gold Coast Industries We Dominate</h2>
+            <p class="section-subtitle">Proven success across the Coast's key commercial sectors</p>
             <div class="industries-grid">
                 <div class="industry-card">
-                    <h3>Construction & Engineering</h3>
-                    <p>Connect with Brisbane's booming construction industry. We help suppliers, subcontractors, and service providers secure commercial building contracts.</p>
-                </div>
-                <div class="industry-card">
-                    <h3>Professional Services</h3>
-                    <p>Accountants, lawyers, consultants, and IT services targeting Brisbane's corporate sector. We position you in front of decision-makers seeking professional expertise.</p>
-                </div>
-                <div class="industry-card">
-                    <h3>Manufacturing & Logistics</h3>
-                    <p>Brisbane's port and manufacturing hub needs reliable B2B suppliers. We connect you with businesses requiring logistics, equipment, and manufacturing services.</p>
-                </div>
-                <div class="industry-card">
-                    <h3>Healthcare & Aged Care</h3>
-                    <p>Queensland's growing healthcare sector needs specialized B2B services. From medical equipment to facility management, we help you reach healthcare decision-makers.</p>
-                </div>
-                <div class="industry-card">
-                    <h3>Government & Education</h3>
-                    <p>Navigate Brisbane's government tenders and educational institution contracts. We help you understand procurement processes and connect with public sector buyers.</p>
-                </div>
-                <div class="industry-card">
+                    <div class="industry-icon">🏨</div>
                     <h3>Tourism & Hospitality</h3>
-                    <p>Brisbane's tourism industry requires ongoing B2B support. Connect with hotels, restaurants, and tourism operators needing your commercial services.</p>
+                    <p>Connect with hotels, resorts, attractions, and restaurants. We help suppliers secure contracts with Gold Coast's major tourism operators and event venues.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">🏗️</div>
+                    <h3>Construction & Development</h3>
+                    <p>Gold Coast's building boom creates endless opportunities. We connect contractors, suppliers, and services with major development projects.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">🏢</div>
+                    <h3>Professional Services</h3>
+                    <p>Legal, accounting, consulting, and IT services for Gold Coast's growing business community. Target corporate relocations and expanding companies.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">🎯</div>
+                    <h3>Event & Conference Services</h3>
+                    <p>Major events, conferences, and exhibitions need B2B support. From catering to AV equipment, we connect you with event organizers.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">⚡</div>
+                    <h3>Maintenance & Facility Services</h3>
+                    <p>High-rise buildings, resorts, and commercial properties need ongoing maintenance. Secure long-term contracts with property managers.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">🚛</div>
+                    <h3>Logistics & Transport</h3>
+                    <p>Tourism and development create massive logistics needs. Connect with businesses requiring freight, delivery, and transport services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seasonal-solution">
+        <div class="container">
+            <div class="seasonal-content">
+                <h2 class="section-title" style="color: white;">Solve the Seasonal Challenge</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">Gold Coast businesses face unique seasonal fluctuations. Our system ensures year-round revenue.</p>
+
+                <div class="seasonal-grid">
+                    <div class="season-card">
+                        <h3>Peak Season (Dec-Mar)</h3>
+                        <p>Maximize high-demand periods with strategic positioning. Capture premium contracts when tourism peaks.</p>
+                    </div>
+                    <div class="season-card">
+                        <h3>Shoulder Season (Apr-May, Sep-Nov)</h3>
+                        <p>Target maintenance, upgrades, and preparation contracts. Events and conferences fill the gaps.</p>
+                    </div>
+                    <div class="season-card">
+                        <h3>Off-Season (Jun-Aug)</h1>
+                        <p>Focus on corporate clients, construction projects, and annual contracts unaffected by tourism cycles.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -754,52 +824,56 @@
     <section class="case-study">
         <div class="container">
             <div class="case-content">
-                <h2 class="section-title" style="color: white;">Brisbane Success Story</h2>
-                <h3>Commercial Cleaning Company Triples Contract Value</h3>
-                <p>A Brisbane commercial cleaning company was struggling to move beyond small office contracts. They wanted to secure major corporate and government cleaning contracts but couldn't reach decision-makers.</p>
+                <h2 class="section-title">Gold Coast Success Story</h2>
+                <h3 style="text-align: center; color: #950606; margin-bottom: 2rem;">Event Services Company Achieves Year-Round Revenue</h3>
+
+                <p>A Gold Coast event services company was struggling with extreme seasonal fluctuations. They were booked solid during peak tourist season but had virtually no revenue for 4 months each year.</p>
 
                 <div class="testimonial">
-                    "WeWinLeads transformed our business. Within 6 months, we went from $15K monthly contracts to over $45K. We're now the preferred cleaning contractor for three major Brisbane office complexes and have a Queensland government contract."
+                    "WeWinLeads helped us break the seasonal curse. We now have corporate contracts that run year-round, plus we're the preferred vendor for three major Gold Coast hotels. Our lowest month is now better than our previous peak months."
                     <br><br>
-                    <strong>- Sarah Chen, Brisbane Commercial Cleaning</strong>
+                    <strong>- Marcus Thompson, Gold Coast Premier Events</strong>
                 </div>
 
-                <p><strong>Results Achieved:</strong></p>
-                <ul style="text-align: left; max-width: 500px; margin: 1rem auto;">
-                    <li>300% increase in monthly contract value</li>
-                    <li>Secured 3 major corporate contracts</li>
-                    <li>Won competitive government tender</li>
-                    <li>Reduced sales cycle from 6 months to 2 months</li>
-                </ul>
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+                    <h4 style="color: #2c5aa0; margin-bottom: 1rem;">Results Achieved:</h4>
+                    <ul style="text-align: left;">
+                        <li>Eliminated seasonal revenue gaps</li>
+                        <li>Secured 3 year-round hotel contracts</li>
+                        <li>Added 5 corporate annual contracts</li>
+                        <li>Increased off-season revenue by 400%</li>
+                        <li>Achieved predictable $25K monthly minimum</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="local-keywords">
         <div class="container">
-            <h2 class="section-title">Brisbane Search Terms We Target</h2>
-            <p class="section-subtitle">The exact keywords Brisbane businesses use to find commercial services</p>
+            <h2 class="section-title">Gold Coast Search Terms We Target</h2>
+            <p class="section-subtitle">The exact keywords Gold Coast businesses use to find commercial services</p>
             <div class="keywords-grid">
-                <div class="keyword-tag">Brisbane commercial contractors</div>
-                <div class="keyword-tag">B2B services Brisbane</div>
-                <div class="keyword-tag">Brisbane business suppliers</div>
-                <div class="keyword-tag">Commercial tenders Brisbane</div>
-                <div class="keyword-tag">Brisbane corporate services</div>
-                <div class="keyword-tag">Queensland government contracts</div>
-                <div class="keyword-tag">Brisbane professional services</div>
-                <div class="keyword-tag">Commercial cleaning Brisbane</div>
-                <div class="keyword-tag">Brisbane construction suppliers</div>
-                <div class="keyword-tag">B2B marketing Brisbane</div>
-                <div class="keyword-tag">Brisbane facility management</div>
-                <div class="keyword-tag">Corporate catering Brisbane</div>
+                <div class="keyword-tag">Gold Coast business services</div>
+                <div class="keyword-tag">B2B suppliers Gold Coast</div>
+                <div class="keyword-tag">Commercial services Gold Coast</div>
+                <div class="keyword-tag">Gold Coast contractors</div>
+                <div class="keyword-tag">Hotel suppliers Gold Coast</div>
+                <div class="keyword-tag">Event services Gold Coast</div>
+                <div class="keyword-tag">Gold Coast commercial cleaning</div>
+                <div class="keyword-tag">Tourism suppliers Gold Coast</div>
+                <div class="keyword-tag">Gold Coast facility management</div>
+                <div class="keyword-tag">Construction suppliers Gold Coast</div>
+                <div class="keyword-tag">Corporate catering Gold Coast</div>
+                <div class="keyword-tag">Gold Coast business solutions</div>
             </div>
         </div>
     </section>
 
-    <section id="contact" style="padding: 4rem 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+    <section id="contact" style="padding: 4rem 0; background: linear-gradient(135deg, #950606 0%, #ffd700 100%); color: white; text-align: center;">
         <div class="container">
-            <h2 class="section-title" style="color: white;">Ready to Dominate Brisbane's B2B Market?</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Book a Brisbane-focused strategy call to discover how we'll connect you with commercial opportunities</p>
+            <h2 class="section-title" style="color: white;">Ready to Dominate Gold Coast B2B?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Book a Gold Coast-focused strategy call to end seasonal uncertainty and build predictable growth</p>
             <div style="max-width: 600px; margin: 0 auto;">
                 <form style="display: grid; gap: 1rem;">
                     <input type="text" placeholder="Business Name" style="padding: 1rem; border: none; border-radius: 5px;">
@@ -807,16 +881,17 @@
                     <input type="email" placeholder="Email Address" style="padding: 1rem; border: none; border-radius: 5px;">
                     <input type="tel" placeholder="Phone Number" style="padding: 1rem; border: none; border-radius: 5px;">
                     <select style="padding: 1rem; border: none; border-radius: 5px;">
-                        <option>Select Your Brisbane Area</option>
-                        <option>Brisbane CBD</option>
-                        <option>South Brisbane</option>
-                        <option>North Brisbane</option>
-                        <option>East Brisbane</option>
-                        <option>West Brisbane</option>
-                        <option>Greater Brisbane</option>
+                        <option>Select Your Gold Coast Area</option>
+                        <option>Surfers Paradise</option>
+                        <option>Broadbeach</option>
+                        <option>Southport</option>
+                        <option>Robina</option>
+                        <option>Nerang</option>
+                        <option>Coolangatta</option>
+                        <option>Other Gold Coast</option>
                     </select>
-                    <textarea placeholder="What commercial opportunities are you targeting in Brisbane?" style="padding: 1rem; border: none; border-radius: 5px; min-height: 100px; resize: vertical;"></textarea>
-                    <button type="submit" class="cta-button" style="border: none; cursor: pointer;">Get Brisbane Strategy Call</button>
+                    <textarea placeholder="Tell us about your business and seasonal challenges..." style="padding: 1rem; border: none; border-radius: 5px; min-height: 100px; resize: vertical;"></textarea>
+                    <button type="submit" class="cta-button" style="border: none; cursor: pointer; background: #2c5aa0;">Get Gold Coast Strategy Call</button>
                 </form>
             </div>
         </div>
@@ -824,8 +899,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 WeWinLeads Brisbane. Connecting Brisbane businesses with commercial growth opportunities.</p>
-            <p>Brisbane B2B Lead Generation | Commercial Contracts | Strategic Marketing</p>
+            <p>&copy; 2024 WeWinLeads Gold Coast. Connecting coastal businesses with year-round commercial opportunities.</p>
+            <p>Gold Coast B2B Lead Generation | Tourism Industry Specialists | Seasonal Business Solutions</p>
         </div>
     </footer>
 

@@ -102,16 +102,16 @@
 
         /* Enhanced Disjointed Navigation - Always Consistent */
         header {
-            background: rgba(149, 6, 6, 0.7) !important;
-            backdrop-filter: blur(4px) !important;
-            -webkit-backdrop-filter: blur(4px) !important;
+            background: rgba(246, 99, 82, 0.95) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
             position: fixed !important;
             top: 20px !important;
             left: 20px !important;
             right: 20px !important;
             z-index: 1000 !important;
             border-radius: 24px !important;
-            box-shadow: 0 8px 32px rgba(39, 38, 31, 0.15), 0 4px 16px rgba(149, 6, 6, 0.3) !important;
+            box-shadow: 0 8px 32px rgba(39, 38, 31, 0.15), 0 4px 16px rgba(246, 99, 82, 0.3) !important;
             border: 1px solid rgba(255, 255, 255, 0.2) !important;
             transition: none !important;
             transform: none !important;
@@ -218,7 +218,7 @@
         }
 
         .pricing-hero {
-            background: #950606;
+            background: #f66352;
             color: white;
             padding: 10rem 0 4rem 0; /* Extended top padding to cover nav area */
             text-align: center;
@@ -262,8 +262,8 @@
 
         .pricing-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(149, 6, 6, 0.15);
-            border-color: #950606;
+            box-shadow: 0 20px 40px rgba(246, 99, 82, 0.15);
+            border-color: #f66352;
         }
 
         .pricing-badge {
@@ -271,7 +271,7 @@
             top: -15px;
             left: 50%;
             transform: translateX(-50%);
-            background: #950606;
+            background: #f66352;
             color: white;
             padding: 0.5rem 1.5rem;
             border-radius: 20px;
@@ -290,7 +290,7 @@
         .price-amount {
             font-size: 2.2rem;
             font-weight: 700;
-            color: #950606;
+            color: #f66352;
             text-align: center;
             margin-bottom: 1.5rem;
         }
@@ -342,7 +342,7 @@
         .cta-button {
             display: block;
             text-align: center;
-            background: #950606;
+            background: #f66352;
             color: white;
             padding: 1rem 2rem;
             text-decoration: none;
@@ -350,13 +350,13 @@
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s;
-            box-shadow: 0 4px 14px 0 rgba(149, 6, 6, 0.3);
+            box-shadow: 0 4px 14px 0 rgba(246, 99, 82, 0.3);
         }
 
         .cta-button:hover {
-            background: #7a0505;
+            background: #e55547;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px 0 rgba(149, 6, 6, 0.4);
+            box-shadow: 0 6px 20px 0 rgba(246, 99, 82, 0.4);
         }
 
         .roi-calculator {
@@ -391,14 +391,14 @@
             border-radius: 8px;
             box-shadow: 0 8px 30px rgba(39, 38, 31, 0.08);
             border: 1px solid #e3d5cf;
-            border-left: 4px solid #950606;
+            border-left: 4px solid #f66352;
             transition: all 0.3s;
         }
 
         .example-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(149, 6, 6, 0.15);
-            border-color: #950606;
+            box-shadow: 0 20px 40px rgba(246, 99, 82, 0.15);
+            border-color: #f66352;
         }
 
         .example-stats {
@@ -418,7 +418,7 @@
         .stat-number {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #950606;
+            color: #f66352;
         }
 
         .guarantee-section {
@@ -443,7 +443,7 @@
         }
 
         .guarantee-item:hover {
-            background: rgba(149, 6, 6, 0.1);
+            background: rgba(246, 99, 82, 0.1);
             transform: translateY(-4px);
         }
 
@@ -512,8 +512,8 @@
             top: 80px;
             left: 8px;
             right: 8px;
-            background: rgba(149, 6, 6, 0.98);
-            backdrop-filter: blur(4px);
+            background: rgba(246, 99, 82, 0.98);
+            backdrop-filter: blur(20px);
             border-radius: 16px;
             padding: 24px;
             z-index: 1001;
@@ -566,7 +566,7 @@
             border: 2px solid transparent;
             display: inline-block;
             background: white;
-            color: #950606;
+            color: #f66352;
             border-color: white;
         }
 
@@ -902,12 +902,12 @@
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
                     <div>
                         <h3 style="color: #27261f; margin-bottom: 1rem;">Average Contract Value</h3>
-                        <div style="font-size: 2rem; font-weight: 700; color: #950606;">$15,000</div>
+                        <div style="font-size: 2rem; font-weight: 700; color: #f66352;">$15,000</div>
                         <p style="color: #8a6d55;">Brisbane/Gold Coast Average</p>
                     </div>
                     <div>
                         <h3 style="color: #27261f; margin-bottom: 1rem;">Monthly Investment</h3>
-                        <div style="font-size: 2rem; font-weight: 700; color: #950606;">$3,000</div>
+                        <div style="font-size: 2rem; font-weight: 700; color: #f66352;">$3,000</div>
                         <p style="color: #8a6d55;">Retainer Model</p>
                     </div>
                     <div>

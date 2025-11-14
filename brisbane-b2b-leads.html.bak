@@ -104,16 +104,16 @@
 
         /* Enhanced Disjointed Navigation - Always Consistent */
         header {
-            background: rgba(149, 6, 6, 0.7) !important;
-            backdrop-filter: blur(4px) !important;
-            -webkit-backdrop-filter: blur(4px) !important;
+            background: rgba(246, 99, 82, 0.95) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
             position: fixed !important;
             top: 20px !important;
             left: 20px !important;
             right: 20px !important;
             z-index: 1000 !important;
             border-radius: 24px !important;
-            box-shadow: 0 8px 32px rgba(39, 38, 31, 0.15), 0 4px 16px rgba(149, 6, 6, 0.3) !important;
+            box-shadow: 0 8px 32px rgba(39, 38, 31, 0.15), 0 4px 16px rgba(246, 99, 82, 0.3) !important;
             border: 1px solid rgba(255, 255, 255, 0.2) !important;
             transition: none !important;
             transform: none !important;
@@ -220,7 +220,7 @@
         }
 
         .hero-local {
-            background: #950606;
+            background: #f66352;
             color: white;
             padding: 11rem 0 5rem 0; /* Extended top padding to cover nav area */
             text-align: center;
@@ -249,7 +249,7 @@
 
         .cta-button {
             display: inline-block;
-            background: #950606;
+            background: #f66352;
             color: white;
             padding: 1rem 2rem;
             text-decoration: none;
@@ -257,13 +257,13 @@
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s;
-            box-shadow: 0 4px 14px 0 rgba(149, 6, 6, 0.3);
+            box-shadow: 0 4px 14px 0 rgba(246, 99, 82, 0.3);
         }
 
         .cta-button:hover {
-            background: #7a0505;
+            background: #e55547;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px 0 rgba(149, 6, 6, 0.4);
+            box-shadow: 0 6px 20px 0 rgba(246, 99, 82, 0.4);
         }
 
         .local-problems {
@@ -286,7 +286,7 @@
         }
 
         .problem-card h3 {
-            color: #950606;
+            color: #f66352;
             margin-bottom: 1rem;
             font-size: 1.3rem;
             font-weight: 600;
@@ -306,7 +306,7 @@
         .stat-card {
             text-align: center;
             padding: 2rem;
-            background: #950606;
+            background: #f66352;
             color: white;
             border-radius: 8px;
             box-shadow: 0 4px 14px 0 rgba(30, 64, 175, 0.3);
@@ -315,7 +315,7 @@
         .stat-number {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #950606;
+            color: #f66352;
         }
 
         .industries-section {
@@ -335,7 +335,7 @@
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-left: 4px solid #950606;
+            border-left: 4px solid #f66352;
         }
 
         .case-study {
@@ -357,7 +357,7 @@
             background: rgba(255,255,255,0.1);
             padding: 2rem;
             border-radius: 8px;
-            border-left: 4px solid #950606;
+            border-left: 4px solid #f66352;
         }
 
         .local-keywords {
@@ -372,7 +372,7 @@
         }
 
         .keyword-tag {
-            background: #950606;
+            background: #f66352;
             color: white;
             padding: 1rem;
             border-radius: 5px;
@@ -440,8 +440,8 @@
             top: 80px;
             left: 8px;
             right: 8px;
-            background: rgba(149, 6, 6, 0.98);
-            backdrop-filter: blur(4px);
+            background: rgba(246, 99, 82, 0.98);
+            backdrop-filter: blur(20px);
             border-radius: 16px;
             padding: 24px;
             z-index: 1001;
@@ -494,7 +494,7 @@
             border: 2px solid transparent;
             display: inline-block;
             background: white;
-            color: #950606;
+            color: #f66352;
             border-color: white;
         }
 
