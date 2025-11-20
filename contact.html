@@ -1069,37 +1069,49 @@
                 submitBtn.disabled = true;
                 submitBtn.style.background = '#8a6d55';
 
-                // Convert FormData to JSON
-                const formObject = {};
+                // Show thank you message first (for immediate feedback)
+                form.style.display = 'none';
+                document.getElementById('thankYouMessage').style.display = 'block';
+
+                // Scroll to thank you message
+                document.getElementById('thankYouMessage').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+
+                // Submit to Google Sheets in background using form submission
+                const iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                iframe.name = 'hiddenFrame';
+                document.body.appendChild(iframe);
+
+                const tempForm = document.createElement('form');
+                tempForm.action = 'https://script.google.com/macros/s/AKfycbzyojXxf3MuJL_r7G4DuuteBYfn5CkxMx-0NyiSYJCSQLpVu7sOWHBGI2pCVPvlciT0HA/exec';
+                tempForm.method = 'POST';
+                tempForm.target = 'hiddenFrame';
+                tempForm.style.display = 'none';
+
+                // Add form data as hidden inputs
                 formData.forEach((value, key) => {
-                    formObject[key] = value;
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = key;
+                    input.value = value;
+                    tempForm.appendChild(input);
                 });
 
-                // Submit to Google Sheets
-                fetch('https://script.google.com/macros/s/AKfycbzyojXxf3MuJL_r7G4DuuteBYfn5CkxMx-0NyiSYJCSQLpVu7sOWHBGI2pCVPvlciT0HA/exec', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formObject)
-                })
-                .then(() => {
-                    // Hide form and show thank you message
-                    form.style.display = 'none';
-                    document.getElementById('thankYouMessage').style.display = 'block';
+                document.body.appendChild(tempForm);
+                tempForm.submit();
 
-                    // Scroll to thank you message
-                    document.getElementById('thankYouMessage').scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center'
-                    });
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                    // Reset button state
-                    submitBtn.textContent = 'Try Again';
-                    submitBtn.disabled = false;
-                    submitBtn.style.background = '#950606';
-                    alert('There was an error submitting your form. Please try again or contact us directly at hello@wewinleads.com');
-                });
+                // Clean up after submission
+                setTimeout(() => {
+                    if (document.body.contains(tempForm)) {
+                        document.body.removeChild(tempForm);
+                    }
+                    if (document.body.contains(iframe)) {
+                        document.body.removeChild(iframe);
+                    }
+                }, 2000);
             });
         });
     </script>
