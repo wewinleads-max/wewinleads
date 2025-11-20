@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/submit-form.js": {
+      "runtime": "@vercel/node"
+    }
+  }
+}

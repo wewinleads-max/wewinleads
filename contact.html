@@ -682,6 +682,74 @@
             margin: 0;
         }
 
+        /* Thank You Message Styles */
+        .thank-you-message {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 40px rgba(39, 38, 31, 0.1);
+            border: 1px solid #e3d5cf;
+            text-align: center;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .thank-you-content h3 {
+            color: #22c55e;
+            font-size: 2rem;
+            margin: 1rem 0 0.5rem 0;
+            font-weight: 700;
+        }
+
+        .thank-you-content p {
+            color: #8a6d55;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .check-animation {
+            margin-bottom: 1rem;
+        }
+
+        .check-icon {
+            width: 80px;
+            height: 80px;
+        }
+
+        .check-circle {
+            stroke-dasharray: 145;
+            stroke-dashoffset: 145;
+            animation: drawCircle 0.8s ease-out forwards;
+        }
+
+        .check-mark {
+            stroke-dasharray: 20;
+            stroke-dashoffset: 20;
+            animation: drawCheck 0.5s ease-out 0.8s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes drawCircle {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes drawCheck {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
         /* Update responsive navigation to use burger menu */
         @media (max-width: 768px) {
             .burger-menu {
@@ -807,6 +875,20 @@
                         <p class="privacy-note">We respect your privacy. Your information will only be used to create your custom strategy.</p>
                     </div>
                 </form>
+
+                <!-- Thank You Message (Hidden by default) -->
+                <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+                    <div class="thank-you-content">
+                        <div class="check-animation">
+                            <svg class="check-icon" viewBox="0 0 50 50">
+                                <circle class="check-circle" cx="25" cy="25" r="23" fill="none" stroke="#22c55e" stroke-width="2"/>
+                                <path class="check-mark" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M14 27l6 6L36 17"/>
+                            </svg>
+                        </div>
+                        <h3>Thank You!</h3>
+                        <p>We will contact you soon with your custom B2B growth strategy.</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Content Sections -->
@@ -976,43 +1058,48 @@
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('leadForm').addEventListener('submit', function(e) {
                 e.preventDefault();
-                
-                const formData = new FormData(this);
+
+                const form = this;
+                const formData = new FormData(form);
+
+                // Show loading state
+                const submitBtn = form.querySelector('.submit-btn');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Submitting...';
+                submitBtn.disabled = true;
+                submitBtn.style.background = '#8a6d55';
+
+                // Convert FormData to JSON
                 const formObject = {};
                 formData.forEach((value, key) => {
                     formObject[key] = value;
                 });
-                
-                // Create email content
-                const emailBody = \`New Lead Qualification Form Submission
 
-Full Name: \${formObject.fullName}
-Email: \${formObject.email}
-Phone: \${formObject.phone || 'Not provided'}
-Company: \${formObject.companyName}
-Website: \${formObject.website || 'Not provided'}
+                // Submit to Google Sheets
+                fetch('https://script.google.com/macros/s/AKfycbzyojXxf3MuJL_r7G4DuuteBYfn5CkxMx-0NyiSYJCSQLpVu7sOWHBGI2pCVPvlciT0HA/exec', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formObject)
+                })
+                .then(() => {
+                    // Hide form and show thank you message
+                    form.style.display = 'none';
+                    document.getElementById('thankYouMessage').style.display = 'block';
 
-Lead Generation Challenge: \${formObject.challenge}
-Preferred Start Timeline: \${formObject.timeline}
-
-Submitted on: \${new Date().toLocaleString()}\`;
-                
-                // Create mailto link
-                const mailtoLink = \`mailto:hello@wewinleads.com?subject=New Lead Qualification - \${formObject.fullName}&body=\${encodeURIComponent(emailBody)}\`;
-                
-                // Open email client
-                window.location.href = mailtoLink;
-                
-                // Show success message
-                const submitBtn = this.querySelector('.submit-btn');
-                const originalText = submitBtn.textContent;
-                submitBtn.textContent = 'Email Opened! Please Send';
-                submitBtn.style.background = '#22c55e';
-                
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.style.background = '#f66352';
-                }, 3000);
+                    // Scroll to thank you message
+                    document.getElementById('thankYouMessage').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    // Reset button state
+                    submitBtn.textContent = 'Try Again';
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '#950606';
+                    alert('There was an error submitting your form. Please try again or contact us directly at hello@wewinleads.com');
+                });
             });
         });
     </script>
